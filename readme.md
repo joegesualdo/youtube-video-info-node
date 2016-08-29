@@ -1,12 +1,6 @@
 ## @joegesualdo/youtube-video-info-node [![Build Status](https://travis-ci.org/joegesualdo/youtube-video-info-node.svg?branch=master)](https://travis-ci.org/joegesualdo/youtube-video-info-node)
 > Get information for a youtube video.
 
-## Highlights
-
-- Highlight 1
-- Highlight 2
-- Highlight 3
-
 ## Install
 ```
 $ npm install --save @joegesualdo/youtube-video-info-node 
@@ -14,38 +8,68 @@ $ npm install --save @joegesualdo/youtube-video-info-node
 
 ## Usage
 ```javascript
-var @joegesualdo/youtubeVideoInfoNode = require("@joegesualdo/youtubeVideoInfoNode").default
+import YoutubeVideoInfo from 'joegesualdo/youtube-video-info-node';
 
-// insert code example here
+new YoutubeVideoInfo('D_U6luQ6I90')
+.then(instance => {
+  instance.getInfo()
+  .then(info => {
+    console.log(info)
+  })
+  .catch(err => {
+    console.log(err)
+  })
+})
+
+
 ```
 
-## Test
-```
-$ npm test
-```
 ## API
-### `methodName(arg1, arg2)`
-> What does this method do?
+### `YoutubeVideoInfo(videoId)`
+> Creates an instance of YoutubeVideoInfo 
 
 | Name | Type | Description |
 |------|------|-------------|
-| arg1 | `Array` | Test description|
-| arg2 | `String` | Test description|
+| videoId | `String` | The id of the youtube video you want info for|
 
-Returns: `Array`, of things
+Returns: `YoutubeVideoInfo` instance
 
 ```javascript
-var @joegesualdo/youtubeVideoInfoNode = require("@joegesualdo/youtube-video-info-node").default
+import YoutubeVideoInfo from 'joegesualdo/youtube-video-info-node';
 
-// insert method example here
+new YoutubeVideoInfo('D_U6luQ6I90')
+.then(instance => {
+  ...
+})
+```
+
+### `getInfo()`
+> Gets the info for a youtube video.
+
+Returns: `Object` where the key/values represent data for a youtube video.
+
+```javascript
+import YoutubeVideoInfo from 'joegesualdo/youtube-video-info-node';
+
+new YoutubeVideoInfo('D_U6luQ6I90')
+.then(instance => {
+  instance.getInfo()
+  .then(info => {
+    console.log(info)
+  })
+  .catch(err => {
+    console.log(err)
+  })
+})
+```
+## Test
+```
+$ npm test
 ```
 ## Build
 ```
 $ npm run build
 ```
-
-## Related
-- [example-package]() - Add description of the example package here.
 
 ## License
 MIT © [Joe Gesualdo]()

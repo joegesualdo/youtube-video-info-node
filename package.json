@@ -23,5 +23,7 @@
     "ava": "^0.15.2",
     "distify-cli": "0.0.13"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@joegesualdo/youtube-video-scraper-node": "0.0.3"
+  }
 }

@@ -1,6 +1,6 @@
 import test from 'ava';
-import @joegesualdo/youtube-video-info-node from './dist'
+import YoutubeVideoInfo from '@joegesualdo/youtube-video-info-node';
 
 test(t => {
-    t.deepEqual([1, 2], [1, 2]);
+  t.deepEqual([1, 2], [1, 2]);
 });
