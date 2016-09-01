@@ -1,6 +1,6 @@
 {
   "name": "@joegesualdo/youtube-video-info-node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get information for a youtube video.",
   "repository": "joegesualdo/youtube-video-info-node",
   "main": "./dist/index.js",

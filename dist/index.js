@@ -240,7 +240,8 @@ module.exports =
 	            });
 	          });
 	        }).then(function () {
-	          console.log(result);
+	          resolve(result);
+	          // console.log(result)
 	        }).catch(function (err) {
 	          console.log(err);
 	        });

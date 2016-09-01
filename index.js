@@ -178,7 +178,8 @@ class YoutubeVideoInfo {
         })
       })
       .then(() => {
-        console.log(result)
+        resolve(result)
+        // console.log(result)
       })
       .catch(err => {
         console.log(err)
